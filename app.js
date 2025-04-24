@@ -20,7 +20,9 @@ function startVoiceInput() {
     };
 }
 
-function addTask() {
+function addTask(event) {
+    if (event) event.preventDefault();
+
     const taskInput = document.getElementById('task-input');
     const taskDateInput = document.getElementById('task-date');
     const taskText = taskInput.value.trim();
@@ -138,4 +140,6 @@ function renderTasks() {
     document.getElementById('completed-today').textContent = completedTodayCount;
 }
 
-window.onload = renderTasks;
+window.onload = function () {
+    renderTasks();
+};
