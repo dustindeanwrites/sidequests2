@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidequests</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>SIDEQUESTS</h1>
+        <p class="subtitle">Can it be done now? Do it now.</p>
+        <div class="tasks-completed">Tasks Completed Today: <span id="completed-today">0</span></div>
+    </header>
+
+    <section class="task-entry">
+        <input type="text" id="task-input" placeholder="Add a task..." />
+        <input type="date" id="task-date" />
+        <button onclick="addTask()">Add Task</button>
+        <button onclick="startVoiceInput()">🎤</button>
+    </section>
+
+    <section class="tasks-section" id="first-tasks">
+        <h2>FIRST:</h2>
+        <ul class="task-list"></ul>
+    </section>
+
+    <section class="tasks-section" id="today-tasks">
+        <h2>TODAY:</h2>
+        <ul class="task-list"></ul>
+    </section>
+
+    <section class="tasks-section" id="week-tasks">
+        <h2>THIS WEEK:</h2>
+        <ul class="task-list"></ul>
+    </section>
+
+    <section class="tasks-section" id="soon-tasks">
+        <h2>SOON:</h2>
+        <ul class="task-list"></ul>
+    </section>
+
+    <section class="completed-section">
+        <h2>Completed Tasks</h2>
+        <ul id="completed-tasks"></ul>
+    </section>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
